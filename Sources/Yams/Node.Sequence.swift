@@ -114,6 +114,8 @@ extension Node.Sequence: MutableCollection {
 }
 
 extension Node.Sequence: RandomAccessCollection {
+    public typealias SubSequence = Array<Node>.SubSequence
+
     // BidirectionalCollection
     public func index(before index: Index) -> Index {
         return nodes.index(before: index)
